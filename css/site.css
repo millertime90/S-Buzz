@@ -3,18 +3,20 @@
     --secondary-color: #FF993B; 
     --dark-color: #111111; 
     --white-color: #DFF3E4; 
+    --whiter-color: rgb(250, 250, 250); 
 } 
 
 body {
-    color: var(--dark-color); 
+    color: var(--whiter-color); 
+    background: var(--dark-color); 
 } 
 
 nav {
-    background-color: var(--dark-color); 
+    background-color: var(--primary-color); 
 } 
 
 footer {
-    background-color: var(--dark-color); 
+    background-color: var(--primary-color); 
     color: var(--white-color); 
     padding-right: 1rem; 
 } 
@@ -26,7 +28,7 @@ footer .social>a {
 
 footer .social>a:hover {
     opacity: 0.9; 
-    color: var(--secondary-color); 
+    color: var(--white-color); 
 } 
 
 h1, h2, h3, h4, h5, h6 {
@@ -50,7 +52,11 @@ h1, h2, h3, h4, h5, h6 {
 } 
 
 .checklist>li i {
-    color: var(--secondary-color); 
+    color: var(--whiter-color); 
+} 
+
+.btn { 
+    color: var(--white-color); 
 } 
 
 code[class*="language-"], pre[class*="language-"] {
@@ -58,6 +64,10 @@ code[class*="language-"], pre[class*="language-"] {
     word-break: break-all;
     word-wrap: break-word;
 } 
+
+main {
+    background: var(--dark-color); 
+}
 
 main>.container {
     padding: 60px 15px 0;
