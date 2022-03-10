@@ -51,6 +51,10 @@ h1, h2, h3, h4, h5, h6 {
     color: rgb(124, 124, 189); 
 } 
 
+.logoFont {
+    font-weight: bold; 
+}
+
 .checklist>li i {
     color: var(--whiter-color); 
 } 
@@ -73,6 +77,11 @@ main>.container {
     padding: 60px 15px 0;
     margin-bottom: 5rem;
 }
+
+.d-flex input {
+    margin: 0.5rem; 
+}
+
 .sticky-footer {
     position: sticky;
     left: 0;

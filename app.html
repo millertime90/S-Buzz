@@ -2,7 +2,7 @@
 <html lang="en" class="h-100">
 
 <head>
-    <title>CF Hundo: A Coding Project By Scott Miller</title>
+    <title>S-Buzz: A Coding Project By Scott Miller</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -23,7 +23,7 @@
 <nav class="navbar navbar-expand-md navbar-dark fixed-top">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
-            <img src="/img/SM_logomark_bs_primary.png" class="d-inline-block align-text-top" alt="Scott Miller Logo Mark" width="30" height="30" /> CF Hundo
+            <img src="/img/SM_logomark_bs_primary.png" class="d-inline-block align-text-top" alt="Scott Miller Logo Mark" width="30" height="30" /> S-BUZZ
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
             aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -55,21 +55,76 @@
     <div class="container col-xxl-8 py-5 px-4">
         <div class="row g-5 py-5 row-cols-1 row-cols-lg">
             <div class="col col-lg-4 border-end border-2">
-                <h1 class="text-white">S-Buzz: A Coding Project</h1>
+                <h1 class="text-white">S-BUZZ: A Coding Project</h1>
                 <h4 class="lead">
                     Live life in the fast lane. A javascript coding exercise using various functions and loops. Write a program that displays a range of numbers and replace those numbers with a user inputed term should they be a multiple of a user inputed number. 
                 </h4>
                 <h2 class="mt-5 border-bottom border-2 text-white">Instructions</h2>
                 <h4 class="lead">Observe the user interface and notice the pairs of user input fields labeled "Term x" & "Multiple x." Also notice the "Start" & "End" labeled user input fields. Set the range of numbers by entering a start and end value in the corresponding fields. Enter a term and multiple per term-multiple pair fields. You may add term-multiple pair fields if you desire. When done, hit "S-Buzz" to display the results.</h4>
             </div>
-            <div class="col">
-
+            <div class="col col-lg-8">
+                <div>
+                    <h2 class="text-white">Enter Values</h2>
+                    <form class="row gy-2 gx-3">
+                        <div id="terms_andMultiples" class="col d-flex flex-column">
+                            <div class="d-flex">
+                                <input id="term1" class="form-control" type="text" 
+                                       aria-label="Term 1" placeholder="Term 1" 
+                                /> 
+                                <input id="multiple1" class="form-control" type="number" 
+                                       min="0" aria-label="Multiple 1" placeholder="Multiple 1" 
+                                />
+                            </div>
+                            <div class="d-flex">
+                                <input id="term2" class="form-control" type="text" 
+                                       min="0" aria-label="Term 2" placeholder="Term 2" 
+                                /> 
+                                <input id="multiple2" class="form-control" type="number" 
+                                       min="0" aria-label="Multiple 2" placeholder="Multiple 2" 
+                                />
+                            </div>
+                            <div class="d-flex">
+                                <input id="term3" class="form-control" type="text" 
+                                       aria-label="Term 3" placeholder="Term 3" 
+                                /> 
+                                <input id="multiple3" class="form-control" type="number" 
+                                       min="0" aria-label="Multiple 3" placeholder="Multiple 3" 
+                                />
+                            </div>
+                            <!-- Render more .termx - .multiplex HTML via JS on user command here -->
+                            <div class="order-last d-flex justify-content-end">
+                                <button class="btn btn-dark btn-outline-primary text-light m-2" type="button" onclick="addTermMultiple_exec()">Add Term - Multiple</button>
+                            </div>
+                        </div>
+                        <div class="col d-flex flex-column justify-content-between">
+                            <div class="d-flex">
+                                <input id="start_ofRange" class="form-control" type="number" 
+                                       min="0" aria-label="Start" placeholder="Start" 
+                                /> 
+                                <input id="end_ofRange" class="form-control" type="number" 
+                                       min="0" aria-label="End" placeholder="End" 
+                                /> 
+                            </div>
+                            <div class="d-flex">
+                                <button class="btn btn-dark btn-outline-primary text-light m-2 logoFont" type="button" onclick="getResults()">S-BUZZ!</button>
+                            </div>
+                        </div>
+                    </form>
+                    <h2 class="text-white mt-5 border-bottom border-2">Results</h2>
+                    <div class="table-responsive">
+                        <table class="table table-striped table-sm">
+                            <tbody id="results">
+                                <!-- Results rendered here with JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </main>
 <!-- FOOTER SECTION --> 
-<footer class="footer mt-auto py-3 sticky-footer">
+<footer class="footer mt-auto py-3 sticky-footer fixed-bottom">
     <div class="container-fluid">
         <div class="row row-cols-1 row-cols-lg-3 gy-2">
             <div class="col order-last order-lg-first text-light d-flex align-items-center">
@@ -90,7 +145,7 @@
                         </a>
                     </div>
                     <div class="col social">
-                        <a href="#" target="_blank">
+                        <a href="https://github.com/millertime90" target="_blank">
                             <i class="fab fa-github fa-2x"></i>
                         </a>
                     </div>
